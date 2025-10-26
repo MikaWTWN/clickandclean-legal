@@ -3,122 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Click & Clean</title>
+    <title>Legal - Click & Clean</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             color: #333;
+            background: #f9fafb;
         }
-        h1 { color: #9d84c7; margin-bottom: 10px; }
-        h2 { color: #333; margin-top: 30px; }
-        .last-updated { color: #666; font-size: 14px; margin-bottom: 30px; }
-        a { color: #9d84c7; }
+        
+        .header {
+            background: linear-gradient(135deg, #9d84c7 0%, #b19cd9 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: white;
+            border-bottom: 2px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        
+        .nav a {
+            color: #666;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .nav a:hover {
+            color: #9d84c7;
+            border-bottom-color: #9d84c7;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #9d84c7;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        
+        h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 20px;
+            color: #4b5563;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .last-updated {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #92400e;
+        }
+        
+        .contact-box {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .contact-box h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        
+        .faq-item {
+            background: #fafafa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 3px solid #9d84c7;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        a {
+            color: #9d84c7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            color: #9ca3af;
+            margin: 5px 0;
+        }
+        
+        .highlight-box {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 24px; }
+            .section { padding: 25px 20px; }
+            .nav a { padding: 12px 15px; font-size: 13px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: October 26, 2025</p>
+    <div class="header">
+        <h1>🧹 Click & Clean</h1>
+        <p>Legal Information & Support</p>
+    </div>
 
-    <h2>1. Introduction</h2>
-    <p>Welcome to Click & Clean ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
 
-    <h2>2. Information We Collect</h2>
-    
-    <h3>2.1 Personal Information</h3>
-    <p>We collect information that you provide directly to us, including:</p>
-    <ul>
-        <li>Name and contact information (email address, phone number)</li>
-        <li>Profile information (photo, bio, experience)</li>
-        <li>Location data (to show nearby cleaners and services)</li>
-        <li>Payment information (processed securely through Stripe)</li>
-        <li>Communication data (messages within the app)</li>
-    </ul>
+    <div class="container">
+        
+        <!-- PRIVACY POLICY -->
+        <div id="privacy" class="section">
+            <h2>Privacy Policy</h2>
+            <div class="last-updated">📅 Last updated: October 26, 2025</div>
 
-    <h3>2.2 Automatically Collected Information</h3>
-    <ul>
-        <li>Device information (device type, operating system)</li>
-        <li>Usage data (features used, time spent in app)</li>
-        <li>Log data (IP address, access times)</li>
-    </ul>
+            <h3>1. Introduction</h3>
+            <p>Welcome to Click & Clean ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
 
-    <h2>3. How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-        <li>Provide and maintain our services</li>
-        <li>Connect customers with cleaning service providers</li>
-        <li>Process payments securely</li>
-        <li>Send notifications about bookings and messages</li>
-        <li>Improve our app and user experience</li>
-        <li>Comply with legal obligations</li>
-    </ul>
-
-    <h2>4. Information Sharing</h2>
-    <p>We share your information only in the following circumstances:</p>
-    <ul>
-        <li><strong>Between users:</strong> Your profile information is visible to other users to facilitate service bookings</li>
-        <li><strong>Service providers:</strong> We use third-party services including:
+            <h3>2. Information We Collect</h3>
+            
+            <h4>2.1 Personal Information</h4>
+            <p>We collect information that you provide directly to us, including:</p>
             <ul>
-                <li>Stripe for payment processing</li>
-                <li>Firebase for authentication and data storage</li>
-                <li>Socket.io for real-time messaging</li>
+                <li>Name and contact information (email address, phone number)</li>
+                <li>Profile information (photo, bio, experience)</li>
+                <li>Location data (to show nearby cleaners and services)</li>
+                <li>Payment information (processed securely through Stripe)</li>
+                <li>Communication data (messages within the app)</li>
             </ul>
-        </li>
-        <li><strong>Legal requirements:</strong> When required by law or to protect our rights</li>
-    </ul>
 
-    <h2>5. Data Security</h2>
-    <p>We implement appropriate security measures to protect your personal information:</p>
-    <ul>
-        <li>SSL encryption for data transmission</li>
-        <li>Secure payment processing through Stripe</li>
-        <li>Regular security audits</li>
-        <li>Access controls and authentication</li>
-    </ul>
+            <h4>2.2 Automatically Collected Information</h4>
+            <ul>
+                <li>Device information (device type, operating system)</li>
+                <li>Usage data (features used, time spent in app)</li>
+                <li>Log data (IP address, access times)</li>
+            </ul>
 
-    <h2>6. Your Rights (GDPR/AVG Compliance)</h2>
-    <p>Under EU and Dutch law, you have the right to:</p>
-    <ul>
-        <li>Access your personal data</li>
-        <li>Correct inaccurate data</li>
-        <li>Request deletion of your data</li>
-        <li>Object to processing of your data</li>
-        <li>Data portability</li>
-        <li>Withdraw consent at any time</li>
-    </ul>
+            <h3>3. How We Use Your Information</h3>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide and maintain our services</li>
+                <li>Connect customers with cleaning service providers</li>
+                <li>Process payments securely</li>
+                <li>Send notifications about bookings and messages</li>
+                <li>Improve our app and user experience</li>
+                <li>Comply with legal obligations</li>
+            </ul>
 
-    <h2>7. Data Retention</h2>
-    <p>We retain your personal information for as long as necessary to provide our services and comply with legal obligations. You may request deletion of your account and data at any time.</p>
+            <h3>4. Information Sharing</h3>
+            <p>We share your information only in the following circumstances:</p>
+            <ul>
+                <li><strong>Between users:</strong> Your profile information is visible to other users to facilitate service bookings</li>
+                <li><strong>Service providers:</strong> We use third-party services including:
+                    <ul>
+                        <li>Stripe for payment processing</li>
+                        <li>Firebase for authentication and data storage</li>
+                        <li>Socket.io for real-time messaging</li>
+                    </ul>
+                </li>
+                <li><strong>Legal requirements:</strong> When required by law or to protect our rights</li>
+            </ul>
 
-    <h2>8. Children's Privacy</h2>
-    <p>Our service is not intended for users under 18 years of age. We do not knowingly collect information from children.</p>
+            <h3>5. Data Security</h3>
+            <p>We implement appropriate security measures to protect your personal information:</p>
+            <ul>
+                <li>SSL encryption for data transmission</li>
+                <li>Secure payment processing through Stripe</li>
+                <li>Regular security audits</li>
+                <li>Access controls and authentication</li>
+            </ul>
 
-    <h2>9. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+            <h3>6. Your Rights (GDPR/AVG Compliance)</h3>
+            <p>Under EU and Dutch law, you have the right to:</p>
+            <ul>
+                <li>Access your personal data</li>
+                <li>Correct inaccurate data</li>
+                <li>Request deletion of your data</li>
+                <li>Object to processing of your data</li>
+                <li>Data portability</li>
+                <li>Withdraw consent at any time</li>
+            </ul>
 
-    <h2>10. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy, please contact us:</p>
-    <ul>
-        <li>Email: <a href="mailto:privacy@clickandclean.app">privacy@clickandclean.app</a></li>
-        <li>In-app support: Available in the Profile section</li>
-    </ul>
+            <h3>7. Data Retention</h3>
+            <p>We retain your personal information for as long as necessary to provide our services and comply with legal obligations. You may request deletion of your account and data at any time.</p>
 
-    <h2>11. Cookie Policy</h2>
-    <p>Our app uses minimal cookies and local storage for:</p>
-    <ul>
-        <li>Authentication and session management</li>
-        <li>User preferences (dark mode, language)</li>
-        <li>App functionality</li>
-    </ul>
-    <p>We do not use tracking cookies or third-party advertising cookies.</p>
+            <h3>8. Children's Privacy</h3>
+            <p>Our service is not intended for users under 18 years of age. We do not knowingly collect information from children.</p>
 
-    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-    <p style="text-align: center; color: #666; font-size: 14px;">
-        © 2025 Click & Clean. All rights reserved.
-    </p>
+            <h3>9. Cookie Policy</h3>
+            <p>Our app uses minimal cookies and local storage for:</p>
+            <ul>
+                <li>Authentication and session management</li>
+                <li>User preferences (dark mode, language)</li>
+                <li>App functionality</li>
+            </ul>
+            <p>We do not use tracking cookies or third-party advertising cookies.</p>
+        </div>
+
+        <!-- TERMS OF SERVICE -->
+        <div id="terms" class="section">
+            <h2>Terms of Service</h2>
+            <div class="last-updated">📅 Last updated: October 26, 2025</div>
+
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing and using the Click & Clean mobile application ("the App"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+
+            <h3>2. Description of Service</h3>
+            <p>Click & Clean is a marketplace platform that connects customers seeking cleaning services with independent cleaning professionals (ZZP/self-employed contractors). We facilitate these connections but are not a cleaning service provider ourselves.</p>
+
+            <h3>3. User Accounts</h3>
+            
+            <h4>3.1 Account Creation</h4>
+            <ul>
+                <li>You must be at least 18 years old to create an account</li>
+                <li>You must provide accurate and complete information</li>
+                <li>You are responsible for maintaining the confidentiality of your account</li>
+                <li>You are responsible for all activities under your account</li>
+            </ul>
+
+            <h4>3.2 Account Types</h4>
+            <ul>
+                <li><strong>Customer Account:</strong> For users seeking cleaning services</li>
+                <li><strong>ZZP Account:</strong> For independent cleaning professionals offering services</li>
+            </ul>
+
+            <h3>4. User Responsibilities</h3>
+            
+            <div class="highlight-box">
+                <h4>For Customers</h4>
+                <ul>
+                    <li>Provide accurate information about the cleaning job</li>
+                    <li>Be present or arrange access for the scheduled appointment</li>
+                    <li>Pay for services as agreed</li>
+                    <li>Treat service providers with respect</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4>For ZZP Service Providers</h4>
+                <ul>
+                    <li>You must be legally registered as a ZZP/self-employed professional</li>
+                    <li>You must have appropriate insurance and licenses</li>
+                    <li>Provide services professionally and as described</li>
+                    <li>Arrive on time for scheduled appointments</li>
+                    <li>Treat customers and their property with respect</li>
+                </ul>
+            </div>
+
+            <h3>5. Payments and Fees</h3>
+            
+            <h4>5.1 Payment Processing</h4>
+            <ul>
+                <li>Payments are processed securely through Stripe</li>
+                <li>We use an escrow system: payment is held until service completion</li>
+                <li>Customers pay the agreed service price</li>
+            </ul>
+
+            <h4>5.2 Service Fees</h4>
+            <ul>
+                <li><strong>Customers:</strong> Free to use the platform</li>
+                <li><strong>ZZP Providers:</strong> 10% commission on completed jobs</li>
+                <li>No hidden fees or monthly subscriptions</li>
+            </ul>
+
+            <h4>5.3 Refunds and Disputes</h4>
+            <ul>
+                <li>Refunds are handled on a case-by-case basis</li>
+                <li>Disputes should be reported within 48 hours of service completion</li>
+                <li>We reserve the right to mediate disputes and make final decisions</li>
+            </ul>
+
+            <h3>6. Cancellation Policy</h3>
+            <ul>
+                <li>Cancellations more than 24 hours before appointment: <strong>Full refund</strong></li>
+                <li>Cancellations less than 24 hours: Subject to cancellation fee</li>
+                <li>No-shows: No refund</li>
+            </ul>
+
+            <h3>7. Prohibited Conduct</h3>
+            <p>Users may not:</p>
+            <ul>
+                <li>Violate any laws or regulations</li>
+                <li>Harass, abuse, or harm other users</li>
+                <li>Post false or misleading information</li>
+                <li>Attempt to circumvent our payment system</li>
+                <li>Use the platform for illegal activities</li>
+                <li>Share inappropriate content</li>
+                <li>Interfere with the operation of the App</li>
+            </ul>
+
+            <h3>8. Disclaimers & Limitations of Liability</h3>
+            <ul>
+                <li>The App is provided "as is" without warranties of any kind</li>
+                <li>We are not responsible for the quality of services provided by ZZP contractors</li>
+                <li>We do not guarantee availability or error-free operation</li>
+                <li>Users engage with each other at their own risk</li>
+                <li>Click & Clean shall not be liable for any indirect, incidental, or consequential damages</li>
+            </ul>
+
+            <h3>9. Termination</h3>
+            <p>We reserve the right to suspend or terminate your account for violation of these Terms, fraudulent activity, or abuse of the platform.</p>
+
+            <h3>10. Governing Law</h3>
+            <p>These Terms are governed by the laws of the Netherlands. Any disputes shall be resolved in the courts of the Netherlands.</p>
+        </div>
+
+        <!-- SUPPORT -->
+        <div id="support" class="section">
+            <h2>Support & Help</h2>
+
+            <div class="contact-box">
+                <h3>📧 Contact Us</h3>
+                <p><strong>Email:</strong> <a href="mailto:support@clickandclean.app">support@clickandclean.app</a></p>
+                <p><strong>Response Time:</strong> We aim to respond within 24 hours</p>
+                <p><strong>Support Hours:</strong> Monday - Friday, 9:00 - 17:00 CET</p>
+            </div>
+
+            <h3>📱 In-App Support</h3>
+            <p>You can also access support directly from the app:</p>
+            <ol>
+                <li>Open Click & Clean</li>
+                <li>Go to your <strong>Profile</strong> tab</li>
+                <li>Tap <strong>Settings</strong></li>
+                <li>Select <strong>Contact Support</strong></li>
+            </ol>
+
+            <h3>❓ Frequently Asked Questions</h3>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I create an account?</div>
+                <p>Download the Click & Clean app, tap "Sign Up", and follow the prompts to create either a Customer or ZZP (service provider) account.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does payment work?</div>
+                <p>We use a secure escrow system. When you book a service, payment is held securely and only released to the service provider after the job is completed to your satisfaction.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What payment methods do you accept?</div>
+                <p>We accept all major credit and debit cards through our secure payment partner, Stripe. Your payment information is never stored on our servers.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are the fees?</div>
+                <p><strong>For customers:</strong> The platform is free to use. You only pay for the cleaning services you book.<br>
+                <strong>For ZZP providers:</strong> We charge a 10% commission on completed jobs.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel a booking?</div>
+                <p>Go to your Planning/Calendar tab, find the booking, and tap "Cancel". Cancellations more than 24 hours in advance receive a full refund. Late cancellations may incur fees.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I'm not satisfied with the service?</div>
+                <p>Contact us within 48 hours of service completion at <a href="mailto:support@clickandclean.app">support@clickandclean.app</a>. We'll review your case and work towards a fair resolution.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my personal information safe?</div>
+                <p>Yes. We take data security seriously and comply with GDPR/AVG regulations. Read our Privacy Policy above for details.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete my account?</div>
+                <p>Go to Profile → Settings → Account → Delete Account. This action is permanent and will remove all your data.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The app is not working properly. What should I do?</div>
+                <p>Try these steps:</p>
+                <ol>
+                    <li>Make sure you have the latest version of the app</li>
+                    <li>Restart the app</li>
+                    <li>Check your internet connection</li>
+                    <li>Restart your device</li>
+                </ol>
+                <p>If problems persist, contact us at <a href="mailto:support@clickandclean.app">support@clickandclean.app</a></p>
+            </div>
+
+            <h3>🔒 Report Safety Issues</h3>
+            <div class="contact-box">
+                <p>If you experience harassment, inappropriate behavior, or safety concerns, please report immediately:</p>
+                <ul>
+                    <li>Email: <a href="mailto:safety@clickandclean.app">safety@clickandclean.app</a></li>
+                    <li>Or use the "Report" button in the app</li>
+                </ul>
+                <p style="margin-bottom: 0;"><strong>We take safety seriously and will investigate all reports promptly.</strong></p>
+            </div>
+
+            <h3>💡 Feature Requests</h3>
+            <p>Have an idea to improve Click & Clean? We'd love to hear it!</p>
+            <p>Email your suggestions to: <a href="mailto:feedback@clickandclean.app">feedback@clickandclean.app</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p><strong>Click & Clean</strong></p>
+        <p>Connecting customers with professional cleaning services</p>
+        <p style="margin-top: 20px; font-size: 14px;">© 2025 Click & Clean. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
